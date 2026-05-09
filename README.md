@@ -19,6 +19,17 @@ A console-based Banking Management System developed using C++, Object-Oriented P
 - File Handling
 - STL
 
+## Screenshots
+
+### Main Menu
+![Main Menu](Screenshots/Main_Menu.png)
+
+### Deposit Money
+![Deposit](Screenshots/Deposit.png)
+
+### Balance Inquiry
+![Balance](Screenshots/Account_Balance.png)
+
 ## How to Run
 
 ```bash
@@ -31,3 +42,5 @@ Then push again:
 git add .
 git commit -m "Added README"
 git push
+
+

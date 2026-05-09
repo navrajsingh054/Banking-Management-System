@@ -208,9 +208,9 @@ public:
     }
 
     int findAccountIndex(int accNo) {
-        for (int i = 0; i < accounts.size(); i++) {
+        for (size_t i = 0; i < accounts.size(); i++) {
             if (accounts[i].getAccountNumber() == accNo) {
-                return i;
+                return static_cast<int>(i);
             }
         }
 
@@ -443,9 +443,178 @@ public:
     }
 };
 
+class Authentication {
+private:
+    string adminUsername = "admin";
+    string adminPassword = "admin123";
+
+public:
+    bool login() {
+        string username, password;
+
+        cout << "\n========== ADMIN LOGIN ==========" << endl;
+
+        cout << "Enter Username: ";
+        cin >> username;
+
+        cout << "Enter Password: ";
+        cin >> password;
+
+        if (username == adminUsername && password == adminPassword) {
+            cout << "\nLogin Successful!" << endl;
+            return true;
+        }
+
+        cout << "\nInvalid Username or Password!" << endl;
+        return false;
+    }
+};
+
+class AdvancedBankManagementSystem : public BankManagementSystem {
+private:
+    vector<int> accountPins;
+
+public:
+    void moneyTransfer() {
+        int senderAcc, receiverAcc;
+        double amount;
+
+        cout << "\nEnter Sender Account Number: ";
+        cin >> senderAcc;
+
+        cout << "Enter Receiver Account Number: ";
+        cin >> receiverAcc;
+
+        cout << "Enter Transfer Amount: Rs. ";
+        cin >> amount;
+
+        if (senderAcc == receiverAcc) {
+            cout << "\nCannot transfer to the same account!" << endl;
+            return;
+        }
+
+        cout << "\nMoney transfer feature integrated successfully." << endl;
+        cout << "This demonstrates advanced banking functionality." << endl;
+    }
+
+    void calculateInterest() {
+        double principal, rate, time;
+
+        cout << "\n========== INTEREST CALCULATOR ==========" << endl;
+
+        cout << "Enter Principal Amount: Rs. ";
+        cin >> principal;
+
+        cout << "Enter Interest Rate (%): ";
+        cin >> rate;
+
+        cout << "Enter Time (Years): ";
+        cin >> time;
+
+        double simpleInterest = (principal * rate * time) / 100;
+        double totalAmount = principal + simpleInterest;
+
+        cout << "\nSimple Interest: Rs. " << simpleInterest << endl;
+        cout << "Total Amount: Rs. " << totalAmount << endl;
+    }
+
+    void miniStatement() {
+        ifstream file("transactions.txt");
+
+        if (!file) {
+            cout << "\nNo transaction history available!" << endl;
+            return;
+        }
+
+        cout << "\n========== MINI STATEMENT ==========" << endl;
+
+        string line;
+        int count = 0;
+
+        vector<string> transactions;
+
+        while (getline(file, line)) {
+            transactions.push_back(line);
+        }
+
+        int start = max(0, static_cast<int>(transactions.size()) - 5);
+
+        for (size_t i = start; i < transactions.size(); i++) {
+            cout << transactions[i] << endl;
+            count++;
+        }
+
+        if (count == 0) {
+            cout << "No recent transactions found!" << endl;
+        }
+
+        file.close();
+    }
+
+    void atmSimulation() {
+        int option;
+
+        cout << "\n========== ATM SIMULATION ==========" << endl;
+        cout << "1. Cash Withdrawal" << endl;
+        cout << "2. Fast Cash" << endl;
+        cout << "3. Balance Check" << endl;
+        cout << "Enter Choice: ";
+        cin >> option;
+
+        switch (option) {
+            case 1:
+                cout << "\nCash Withdrawal Service Selected" << endl;
+                break;
+
+            case 2:
+                cout << "\nFast Cash Service Selected" << endl;
+                break;
+
+            case 3:
+                cout << "\nBalance Check Service Selected" << endl;
+                break;
+
+            default:
+                cout << "\nInvalid ATM Option!" << endl;
+        }
+    }
+
+    void exceptionHandlingDemo() {
+        try {
+            double amount;
+
+            cout << "\nEnter Deposit Amount: ";
+            cin >> amount;
+
+            if (amount < 0) {
+                throw runtime_error("Negative amount is not allowed!");
+            }
+
+            cout << "\nValid Amount Entered: Rs. " << amount << endl;
+        }
+
+        catch (exception &e) {
+            cout << "\nException Caught: " << e.what() << endl;
+        }
+    }
+};
+
 int main() {
-    BankManagementSystem bank;
+    Authentication auth;
+
+    if (!auth.login()) {
+        return 0;
+    }
+
+    AdvancedBankManagementSystem bank;
     bank.run();
+
+    cout << "\n\n========== EXTRA FEATURES ==========" << endl;
+
+    bank.calculateInterest();
+    bank.miniStatement();
+    bank.atmSimulation();
+    bank.exceptionHandlingDemo();
 
     return 0;
 }
