@@ -37,7 +37,8 @@ A console-based Banking Management System developed using C++, Object-Oriented P
 ![Balance](screenshots/balance.png)
 
 ### Transaction History
-![Transactions](screenshots/transactions.png)
+![Transactions](screenshots/transaction.png)
+
 ## How to Run
 
 ```bash
