@@ -2,3 +2,4 @@
 0|||0
 12|Navraj|Savings|25000
 1001|Navraj Singh|Savings|10000
+1005|Navraj|Savings|70000
