@@ -21,27 +21,24 @@ A console-based Banking Management System developed using C++, Object-Oriented P
 
 ## Screenshots
 
-## Screenshots
-
-## Screenshots
-
 ### Main Menu
-![Main Menu](./screenshots/menu.png)
+<img src="./screenshots/menu.png" width="800">
 
 ### Account Creation
-![Account Creation](./screenshots/create-account.png)
+<img src="./screenshots/create-account.png" width="800">
 
 ### Deposit Money
-![Deposit](./screenshots/deposit.png)
+<img src="./screenshots/deposit.png" width="800">
 
 ### Withdrawal
-![Withdrawal](./screenshots/withdraw.png)
+<img src="./screenshots/withdraw.png" width="800">
 
 ### Balance Inquiry
-![Balance](./screenshots/balance.png)
+<img src="./screenshots/balance.png" width="800">
 
 ### Transaction History
-![Transactions](./screenshots/transaction.png)
+<img src="./screenshots/transaction.png" width="800">
+
 ## How to Run
 
 ```bash
