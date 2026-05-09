@@ -28,7 +28,7 @@ A console-based Banking Management System developed using C++, Object-Oriented P
 <img src="./Screenshots/create-account.png" width="800">
 
 ### Deposit Money
-<img src="./Screenshots/deposit.png" width="800">
+<img src="./Screenshots/deposit-money.png" width="800">
 
 ### Withdrawal
 <img src="./Screenshots/withdraw.png" width="800">
