@@ -22,22 +22,22 @@ A console-based Banking Management System developed using C++, Object-Oriented P
 ## Screenshots
 
 ### Main Menu
-<img src="./screenshots/menu.png" width="800">
+<img src="./Screenshots/menu.png" width="800">
 
 ### Account Creation
-<img src="./screenshots/create-account.png" width="800">
+<img src="./Screenshots/create-account.png" width="800">
 
 ### Deposit Money
-<img src="./screenshots/deposit.png" width="800">
+<img src="./Screenshots/deposit.png" width="800">
 
 ### Withdrawal
-<img src="./screenshots/withdraw.png" width="800">
+<img src="./Screenshots/withdraw.png" width="800">
 
 ### Balance Inquiry
-<img src="./screenshots/balance.png" width="800">
+<img src="./Screenshots/balance.png" width="800">
 
 ### Transaction History
-<img src="./screenshots/transaction.png" width="800">
+<img src="./Screenshots/transaction.png" width="800">
 
 ## How to Run
 
